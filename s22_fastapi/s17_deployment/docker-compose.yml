@@ -1,0 +1,16 @@
+# Docker Compose — 一键启动
+# 启动: docker compose -f s22_fastapi/s17_deployment/docker-compose.yml up -d
+
+services:
+  api:
+    build:
+      context: ../..
+      dockerfile: s22_fastapi/s17_deployment/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_NAME=s17-production
+      - DEBUG=false
+      - SECRET_KEY=prod-secret-change-me
+      - ALLOWED_ORIGINS=http://localhost:3000
+    restart: unless-stopped

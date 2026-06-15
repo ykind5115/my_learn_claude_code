@@ -1,0 +1,35 @@
+# Docker Compose — 一键启动 API + 数据库
+# 启动: cd s22_fastapi && docker compose -f s16_deployment/docker-compose.yml up -d
+
+services:
+  api:
+    build:
+      context: ../..
+      dockerfile: s22_fastapi/s16_deployment/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_NAME=s16-api
+      - DEBUG=false
+      - ALLOWED_ORIGINS=http://localhost:3000
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+
+  # 如果使用 PostgreSQL（注释掉，用 SQLite 时不需要）
+  # db:
+  #   image: postgres:16-alpine
+  #   environment:
+  #     POSTGRES_USER: app
+  #     POSTGRES_PASSWORD: secret
+  #     POSTGRES_DB: appdb
+  #   volumes:
+  #     - pgdata:/var/lib/postgresql/data
+  #   ports:
+  #     - "5432:5432"
+
+# volumes:
+#   pgdata:
