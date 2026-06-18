@@ -18,7 +18,7 @@ s03: 接收参数 — 路径参数和查询参数
 
 from enum import Enum
 
-from fastapi import FastAPI, Query, Path, HTTPException
+from fastapi import FastAPI, Query, Path
 
 app = FastAPI(
     title="s03 - 接收参数",
@@ -206,15 +206,8 @@ def list_products(
         result = [p for p in result if p["price"] <= max_price]
 
     # ── 第 2 步: 排序 ────────────────────────────────────────
-    if sort_by == SortBy.price:
-        sort_key = lambda p: p["price"]
-    elif sort_by == SortBy.name:
-        sort_key = lambda p: p["name"]
-    else:  # rating
-        sort_key = lambda p: p["rating"]
-
     reverse_flag = (order == SortOrder.desc)
-    result.sort(key=sort_key, reverse=reverse_flag)
+    result.sort(key=lambda p: p[sort_by.value], reverse=reverse_flag)
 
     # ── 第 3 步: 分页 ────────────────────────────────────────
     total = len(result)
