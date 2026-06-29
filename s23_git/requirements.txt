@@ -1,0 +1,9 @@
+# s23_git 学习模块依赖
+# 核心依赖：Git（请确保已安装 Git）
+#   Windows: https://git-scm.com/download/win
+#   Mac: brew install git
+#   Linux: sudo apt install git
+
+# Python 依赖（可选，code.py 主要使用 subprocess 调用 git 命令）
+# GitPython 用于 s12_internals 深入探索 .git 对象
+gitpython>=3.1.0
