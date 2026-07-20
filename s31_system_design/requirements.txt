@@ -1,0 +1,3 @@
+# s31_system_design Python 依赖
+# 纯 Python 模拟，无外部依赖
+# 所有概念用 Python 数据结构演示核心原理
