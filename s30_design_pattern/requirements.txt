@@ -1,0 +1,3 @@
+# s30_design_pattern Python 依赖
+# 纯 Python 实现，无外部依赖
+# 所有模式用标准库演示
