@@ -1,0 +1,5 @@
+# s26_linux Python 依赖
+# 本模块主要通过 subprocess 调用 Linux 命令演示概念
+# Python 标准库已足够，无需额外 pip 包
+#
+# 如需在 Windows 上体验完整功能，建议使用 Git Bash 或 WSL
