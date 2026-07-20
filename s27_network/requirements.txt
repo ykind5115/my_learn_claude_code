@@ -1,0 +1,6 @@
+# s27_network Python 依赖
+# 本模块主要用 Python 标准库 (socket, ssl, http, asyncio)
+# 无需额外 pip 包
+#
+# 系统工具依赖 (Git Bash / Linux 自带):
+#   curl, ping, nslookup/dig, traceroute, netstat
