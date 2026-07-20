@@ -1,0 +1,6 @@
+# s28_docker Python 依赖
+# 主要通过 subprocess 调用 docker CLI，无需额外 pip 包
+#
+# 前置条件:
+#   - Docker Desktop (Windows/Mac) 或 Docker Engine (Linux)
+#   - docker 命令在 PATH 中
