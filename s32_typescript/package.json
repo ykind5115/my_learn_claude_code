@@ -1,0 +1,17 @@
+{
+  "name": "s32-typescript",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "demo:s13": "tsc -p s13_decorator && node s13_decorator/dist/code.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "chalk": "^5.4.0",
+    "typescript": "^5.8.0"
+  }
+}

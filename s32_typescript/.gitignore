@@ -1,0 +1,5 @@
+node_modules/
+dist/
+s13_decorator/dist/
+s11_fs_process/.demo/
+s16_capstone/data/
