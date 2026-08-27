@@ -141,3 +141,8 @@ cd s32_typescript && npm run typecheck && cd ..
 2. **any 逃课，unknown 转学**：外部数据一律 unknown，收窄后再用
 3. **类型错误只挡编译期**：node 直跑 .ts 就是证据——标签在运行前全被撕掉
 4. **enum 用 as const 替代**：本模块代码全部可擦除，node 零配置直跑
+
+
+
+## 注释：
+1. ts只静态页面的标签检查；对于定义的变量的类型，要在js运行时才赋值的话，ts是检查不出来的。

@@ -54,3 +54,5 @@ export function print_section(title: string): void {
 export function print_metric(label: string, value: unknown): void {
   console.log(`  ${Color.BOLD}${label}:${Color.RESET} ${value}`);
 }
+
+

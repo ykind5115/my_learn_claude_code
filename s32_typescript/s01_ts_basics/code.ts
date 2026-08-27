@@ -104,7 +104,6 @@ function demo_all(): void {
   // ═══════════════════════════════════════════════════════════
   // 第 6 步: 函数标注
   // ═══════════════════════════════════════════════════════════
-  print_step(6, "函数标注 — 给输入和输出都贴上标签");
 
   function greet(user: { name: string }, times: number = 1): string {
     return `你好，${user.name}！`.repeat(times);
